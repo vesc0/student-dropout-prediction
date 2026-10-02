@@ -8,17 +8,41 @@ This project analyzes student behavior and academic performance to identify at-r
 
 ## Contents
 
+- [Tableau Dashboards](#tableau-dashboards)
 - [Project Structure](#project-structure)
 - [Data](#data)
 - [Models](#models)
 - [Getting Started](#getting-started)
 - [Results](#results)
 
+## Tableau Dashboards
+
+Exploratory analysis of the OULA dataset in Tableau Public, filterable by module and presentation.
+
+**Demographics**
+
+Pass rate by age and gender, average score by prior education, and average score by region and deprivation band (IMD). Students aged 35+ pass more often (50–54% vs 45–46%) and scores rise with prior education (70.8 to 83.5), but demographics alone are a weak signal.
+
+![Demographics dashboard](images/dashboard-demographics.png)
+
+**Courses**
+
+Withdrawal rate by module, score distribution for on-time vs late submissions, and pass rate by registration timing. Withdrawal ranges from 7% (EEE) to 24% (BBB, FFF), and early registrants pass more often (47.2% vs 42.7%).
+
+![Courses dashboard](images/dashboard-courses.png)
+
+**Engagement and outcomes**
+
+Daily VLE clicks across the course, clicks per student by final result, and usage by content type. Activity peaks in the first three weeks and dips every weekend; students who pass or earn a distinction click far more than those who fail or withdraw.
+
+![Engagement dashboard](images/dashboard-engagement.png)
+
 ## Project Structure
 
 ```
 oula_analysis/
 ├── student-dropout-prediction.ipynb        # Main analysis and modeling notebook
+├── images/                                 # Tableau dashboard screenshots
 ├── data/                                   # Dataset files
 │   ├── assessments.csv                     # Assessment details and scores
 │   ├── studentAssessment.csv               # Individual student assessment results
